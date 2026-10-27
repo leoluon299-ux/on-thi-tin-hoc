@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10172b">
+<title>Ôn tập Tin học 12 | Giữa học kì I</title>
+<style>
+  
+/* ===== DORI / STUDY — MOTION UPGRADE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-size: 100% 160%;
+  animation: bgDrift 16s ease-in-out infinite alternate;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  animation: heroReveal .8s cubic-bezier(.2,.75,.25,1) both;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -60% auto -60% -45%;
+  width: 35%;
+  transform: rotate(22deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ffffff12,
+    #ffffff28,
+    transparent
+  );
+  pointer-events: none;
+  animation: heroShimmer 7s ease-in-out infinite;
+}
+
+.stat {
+  transition: transform .3s ease, border-color .3s ease,
+    background .3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+  border-color: #8b9cff70;
+  background: #ffffff10;
+}
+
+.question {
+  animation: cardReveal .55s both;
+  transition: transform .25s ease, border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+.question:hover {
+  transform: translateY(-2px);
+  border-color: #465983;
+  box-shadow: 0 12px 32px #0002;
+}
+
+.btn,
+.tfbtn,
+.option {
+  transition: transform .2s ease, background .2s ease,
+    border-color .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover,
+.tfbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px #0003;
+}
+
+.btn:active,
+.tfbtn:active {
+  transform: scale(.97);
+}
+
+.btn.primary {
+  box-shadow: 0 5px 20px #8b9cff25;
+}
+
+.btn.primary:hover {
+  box-shadow: 0 8px 26px #8b9cff45;
+}
+
+.fill {
+  position: relative;
+  overflow: hidden;
+  transition: width .45s cubic-bezier(.22,1,.36,1);
+}
+
+.fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    #ffffff65 50%,
+    transparent 80%
+  );
+  animation: progressShine 2s linear infinite;
+}
+
+.result.show {
+  animation: resultReveal .65s cubic-bezier(.2,.75,.25,1) both;
+}
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 12px 8px;
+  margin-top: 48px;
+}
+
+.footer-line {
+  height: 1px;
+  max-width: 240px;
+  margin: 0 auto 24px;
+  background: linear-gradient(
+    90deg, transparent, #8b9cff, #45d6a0, transparent
+  );
+  animation: lineGlow 3s ease-in-out infinite alternate;
+}
+
+.footer-brand {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #edf3ff;
+}
+
+.footer-brand span {
+  color: #8b9cff;
+}
+
+.copyright {
+  color: #aab8d5;
+  margin: 12px 0 5px;
+}
+
+.footer-note {
+  max-width: 520px;
+  margin: 8px auto 0;
+  color: #7483a2;
+  font-size: 11px;
+}
+
+@keyframes bgDrift {
+  from { background-position: center top; }
+  to { background-position: center bottom; }
+}
+
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroShimmer {
+  0%, 65% { left: -45%; }
+  100% { left: 130%; }
+}
+
+@keyframes cardReveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes progressShine {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+@keyframes resultReveal {
+  from { opacity: 0; transform: translateY(18px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes lineGlow {
+  from { opacity: .5; transform: scaleX(.75); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+:root{--bg:#0b1020;--panel:#121a30;--panel2:#18233d;--text:#edf3ff;--muted:#9eacc8;--line:#2a3857;--accent:#8b9cff;--good:#45d6a0;--bad:#ff7485}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1b2b50 0,#0b1020 48rem);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input{font:inherit}.wrap{max-width:1050px;margin:auto;padding:22px 16px 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}.brand{font-weight:800;letter-spacing:.2px}.brand span{color:var(--accent)}.pill{border:1px solid var(--line);border-radius:99px;padding:6px 11px;color:var(--muted);font-size:12px}.hero{padding:28px;border:1px solid #344365;border-radius:24px;background:linear-gradient(135deg,#1d2c4d,#141b30 72%);box-shadow:0 20px 60px #0003}.eyebrow{color:#aab8ff;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}.hero h1{font-size:clamp(27px,5vw,43px);line-height:1.12;margin:10px 0}.hero p{color:var(--muted);margin:8px 0 0}.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.stat{padding:10px 14px;background:#ffffff08;border:1px solid #ffffff12;border-radius:13px;font-size:13px}.stat b{display:block;font-size:19px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.btn{border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:var(--panel2);color:var(--text);cursor:pointer;font-weight:650}.btn.primary{background:var(--accent);border-color:transparent;color:#10172b}.btn:hover{filter:brightness(1.1)}.progressbox{background:var(--panel);border:1px solid var(--line);padding:14px;border-radius:15px;margin-bottom:18px}.progressrow{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);margin-bottom:9px}.track{height:7px;background:#293653;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#8b9cff,#45d6a0);transition:width .2s}.section-title{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:30px 2px 12px}.section-title h2{font-size:20px;margin:0}.section-title p{margin:3px 0 0;color:var(--muted);font-size:13px}.question{background:#111a2f;border:1px solid var(--line);border-radius:17px;padding:18px;margin:11px 0;scroll-margin-top:14px}.qhead{display:flex;align-items:flex-start;gap:12px}.num{display:grid;place-items:center;min-width:34px;height:34px;border-radius:10px;background:#273458;color:#cbd3ff;font-size:13px;font-weight:800}.qtext{font-weight:650;flex:1}.topic{font-size:11px;color:#aab8ff;border:1px solid #35446a;border-radius:99px;padding:3px 8px;white-space:nowrap}.options{display:grid;gap:8px;margin:15px 0 0 46px}.option{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid #293653;border-radius:11px;cursor:pointer;color:#dbe5fb;transition:.15s}.option:hover{background:#ffffff08;border-color:#6578ba}.option input{margin-top:5px;accent-color:#9aa8ff}.option.selected{border-color:#8b9cff;background:#8b9cff14}.option.correct{border-color:var(--good);background:#45d6a012}.option.wrong{border-color:var(--bad);background:#ff748512}.letter{font-weight:800;color:#aab8ff;min-width:18px}.feedback{margin:12px 0 0 46px;font-size:13px;color:var(--muted)}.feedback.good{color:var(--good)}.feedback.bad{color:var(--bad)}.tf-options{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 0 46px}.tfbtn{padding:9px 17px;border:1px solid var(--line);border-radius:10px;background:#17223b;color:var(--text);cursor:pointer}.tfbtn.selected{border-color:var(--accent);background:#8b9cff20}.tfbtn.correct{border-color:var(--good)}.tfbtn.wrong{border-color:var(--bad)}.result{display:none;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;margin:24px 0}.result.show{display:block}.score{font-size:42px;font-weight:850;letter-spacing:-1px}.result p{color:var(--muted)}.note{padding:14px;border:1px solid #594d2c;background:#4b3d171f;border-radius:13px;color:#e7d6a0;font-size:13px;margin-top:18px}.footer{text-align:center;color:#7483a2;font-size:12px;margin-top:32px}.search{flex:1;min-width:180px;background:#111a2f;border:1px solid var(--line);border-radius:12px;padding:10px 13px;color:var(--text)}.hidden{display:none!important}
+@media(max-width:600px){.wrap{padding:14px 11px 40px}.hero{padding:21px;border-radius:18px}.question{padding:14px}.options,.tf-options{margin-left:0}.feedback{margin-left:0}.topic{display:none}.top{align-items:flex-start}.qhead{gap:9px}.toolbar .btn{flex:1}.section-title{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body><main class="wrap">
+<header class="top"><div class="brand">DORI<span> / STUDY</span></div><div class="pill">TIN HỌC 12 · GKI 2026–2027</div></header>
+<section class="hero"><div class="eyebrow">Bộ đề ôn tập tương tác</div><h1>Ôn tập giữa học kì I<br> Tin học 12</h1><p>Làm bài trực tiếp trên web, xem điểm và kiểm tra đáp án sau khi nộp. Giao diện tối ưu cho điện thoại.</p><div class="stats"><div class="stat"><b>40</b> câu chọn đáp án</div><div class="stat"><b>7</b> câu đúng / sai có đáp án</div><div class="stat"><b>47</b> câu được chấm điểm</div></div></section>
+<div class="toolbar"><input class="search" id="search" placeholder="Tìm câu hỏi..." aria-label="Tìm câu hỏi"><button class="btn" id="clear">Làm lại</button><button class="btn primary" id="submit">Nộp bài & xem điểm</button></div>
+<div class="progressbox"><div class="progressrow"><span>Tiến độ làm bài</span><b id="progressText">0 / 68 ý</b></div><div class="track"><div class="fill" id="progressFill"></div></div></div>
+<div class="section-title"><div><h2>Phần I · Trắc nghiệm nhiều lựa chọn</h2><p>Chọn một phương án cho mỗi câu.</p></div><span class="pill">40 câu</span></div>
+<div id="mcq"></div>
+<div class="section-title"><div><h2>Phần II · Trắc nghiệm đúng / sai</h2><p>Chọn Đúng hoặc Sai cho từng nhận định.</p></div><span class="pill">Câu 1–7</span></div>
+<div id="tf"></div>
+<div class="note"><b>Lưu ý về tài liệu gốc:</b> Đáp án cuối tài liệu không có bảng đáp án cho Phần II – Câu 8, nên câu này chưa được đưa vào phần chấm điểm. Ở câu 35 Phần I, tài liệu ghi đáp án “B/C”; hệ thống chấp nhận cả hai lựa chọn.</div>
+<section class="result" id="result"><div class="eyebrow">Kết quả bài làm</div><div class="score" id="score">0/47</div><p id="resultText"></p><div class="toolbar"><button class="btn primary" id="review">Xem đáp án đúng</button><button class="btn" id="backTop">Về đầu trang</button></div></section>
+
+<footer class="footer site-footer">
+  <div class="footer-line"></div>
+  <div class="footer-brand">DORI <span>/ STUDY</span></div>
+  <p>Website ôn tập Tin học 12</p>
+  <p class="copyright">© 2026 Dori. All rights reserved.</p>
+  <p class="footer-note">
+    Nội dung câu hỏi và đáp án dựa trên tài liệu ôn tập
+    được cung cấp. Website phục vụ mục đích học tập.
+  </p>
+</footer>
+
+</main>
+<script>
+const DATA = {"mcq": [{"q": "Khả năng nào sau đây không là đặc trưng của AI?", "opts": ["Tập luyện thể thao", "Hiểu ngôn ngữ", "Suy luận", "Học"], "ans": 0, "alt": null}, {"q": "Phương án nào sau đây là đúng khi nói về trí tuệ nhân tạo (AI)?", "opts": ["Một chương trình học trực tuyến", "Một lĩnh vực nghiên cứu nhằm phát triển các hệ thống thông minh", "Một ngôn ngữ lập trình", "Một phần cứng đặc biệt dành riêng cho máy tính"], "ans": 1, "alt": null}, {"q": "Sự phát triển của AI trong tương lai có thể mang lại rủi ro nào sau đây?", "opts": ["Tăng cường bảo mật và quyền riêng tư", "Mất việc làm do tự động hoá", "Cải thiện chất lượng cuộc sống", "Tăng cường khả năng học tập và nghiên cứu"], "ans": 1, "alt": null}, {"q": "Mô tả nào sau đây nêu đúng quá trình nhận thức của máy tính?", "opts": ["Quá trình trích rút được tri thức từ những dữ liệu do con người cung cấp", "Quá trình tự động hiểu biết được môi trường xung quanh thông qua cảm biến", "Quá trình thu thập thông tin từ nguồn tài nguyên mạng do con người cung cấp", "Quá trình đọc, hiểu tri thức mới thông qua các quy tắc và tri thức có sẵn"], "ans": 0, "alt": null}, {"q": "Cách ứng xử nào phù hợp đối với kết quả được tạo ra bởi AI?", "opts": ["Tin tưởng hoàn toàn vào tính chính xác và khách quan", "Xem xét một cách cẩn trọng và có trách nhiệm", "Giữ nguyên để làm sản phẩm học tập và nghiên cứu", "Chia sẻ ra cộng đồng mà không cần kiểm chứng"], "ans": 1, "alt": null}, {"q": "Cụm từ nào thích hợp để mô tả sự thông minh của máy tính?", "opts": ["Trí tuệ của máy tính", "Trí nhớ của máy tính", "Trí óc của máy tính", "Suy nghĩ của máy tính"], "ans": 0, "alt": null}, {"q": "Lĩnh vực nào đang ứng dụng mạnh mẽ trí tuệ nhân tạo?", "opts": ["Nông nghiệp, y tế, giao thông, giáo dục", "Thể thao, âm nhạc, hội họa, du lịch", "Chỉ trong nghiên cứu khoa học", "Chỉ trong các trò chơi điện tử"], "ans": 0, "alt": null}, {"q": "Phát biểu nào nêu đúng khái niệm trí tuệ nhân tạo?", "opts": ["Khả năng của máy tính có thể làm những công việc mang tính trí tuệ của con người", "Trí tuệ của máy tính có thể làm những công việc tương đương trí tuệ con người", "Tích hợp công nghệ hiện đại vào máy tính, giúp máy tính hiểu được con người", "Hoạt động máy tính giao tiếp được với con người bằng ngôn ngữ tự nhiên"], "ans": 0, "alt": null}, {"q": "Sự phát triển của AI không dẫn đến nguy cơ nào sau đây?", "opts": ["Tất cả các lập trình viên sẽ bị mất việc do AI có khả năng lập trình", "Người dùng bị lừa đảo qua mạng do kẻ xấu lợi dụng nội dung giả mạo của AI", "Quyền riêng tư bị xâm phạm do AI có khả năng thu thập dữ liệu cá nhân", "Các hệ thống mạng bị đe dọa do AI có khả năng khai thác lỗ hổng bảo mật"], "ans": 0, "alt": null}, {"q": "Thiết bị nào sau đây được tích hợp trợ lí ảo?", "opts": ["Máy tính cầm tay", "Điện thoại cảm ứng", "Chuông báo cháy", "Máy quét mã vạch"], "ans": 1, "alt": null}, {"q": "Hành vi nào không thể hiện giao tiếp và ứng xử nhân văn trên mạng?", "opts": ["Sử dụng ngôn từ lịch sự khi bình luận", "Tôn trọng quyền riêng tư của người khác", "Đăng tin sai sự thật về người khác", "Chia sẻ thông tin tích cực, hữu ích"], "ans": 2, "alt": null}, {"q": "Yếu tố nào là điều kiện tiên quyết đảm bảo AI hạn chế vi phạm đạo đức?", "opts": ["Môi trường triển khai", "Phạm vi của thông tin", "Dữ liệu huấn luyện", "Mô hình xây dựng"], "ans": 2, "alt": null}, {"q": "Vì sao cần ứng xử nhân văn trong không gian mạng?", "opts": ["Vì mạng xã hội bắt buộc mọi người phải cư xử lịch sự", "Để tạo hình ảnh tốt, xây dựng môi trường mạng an toàn, tôn trọng lẫn nhau", "Vì không ứng xử nhân văn sẽ bị cấm dùng Internet", "Vì giúp ta trở nên nổi tiếng hơn"], "ans": 1, "alt": null}, {"q": "“Deepfake” dùng để nói về hành vi nào?", "opts": ["Tạo ra các hình ảnh, âm thanh,… giả mạo", "Phát hiện ra các hình ảnh, âm thanh,… giả mạo", "Tạo ra các thông tin không có thật trên mạng", "Phát hiện ra các thông tin giả mạo trên mạng"], "ans": 0, "alt": null}, {"q": "Thấy một bạn bị bình luận ác ý trên mạng, hành động nào thể hiện ứng xử nhân văn?", "opts": ["Chia sẻ bài viết đó để mọi người biết", "Im lặng vì không liên quan đến mình", "Báo cáo vi phạm và khuyên người khác không bình luận tiêu cực", "Tham gia bình luận để phản công"], "ans": 2, "alt": null}, {"q": "Cách ứng xử nào nên thực hiện khi giao tiếp trực tuyến để thể hiện tính nhân văn?", "opts": ["Sử dụng ngôn ngữ lịch sự và tôn trọng", "Gửi tin nhắn Spam", "Phớt lờ tin nhắn của người khác", "Chia sẻ thông tin cá nhân của người khác khi chưa được đồng ý"], "ans": 0, "alt": null}, {"q": "Nhược điểm của giao tiếp trong thế giới ảo là gì?", "opts": ["Khả năng tiếp cận thông tin nhanh chóng", "Dễ dàng xây dựng mối quan hệ chân thành", "Khả năng bị hiểu lầm do thiếu ngữ cảnh", "Tăng cường khả năng làm việc nhóm"], "ans": 2, "alt": null}, {"q": "Khi nhận tin nhắn xúc phạm, em nên làm gì?", "opts": ["Trả lời bằng lời xúc phạm", "Phớt lờ và không phản hồi", "Báo cáo tin nhắn cho quản trị viên hoặc nền tảng", "Chia sẻ tin nhắn để gây thêm mâu thuẫn"], "ans": 2, "alt": null}, {"q": "Khi tham gia tranh luận trực tuyến, em nên làm gì?", "opts": ["Tấn công cá nhân để giành chiến thắng", "Sử dụng ngôn ngữ lịch sự và tôn trọng lẫn nhau", "Phớt lờ ý kiến người khác", "Chia sẻ thông tin sai lệch để thắng"], "ans": 1, "alt": null}, {"q": "Thấy bài viết có thông tin sai lệch trên mạng xã hội, em nên làm gì?", "opts": ["Chia sẻ lại bài viết", "Bình luận xúc phạm người đăng", "Phớt lờ bài viết", "Báo cáo bài viết cho nền tảng"], "ans": 3, "alt": null}, {"q": "Vô tình đăng ảnh gây hiểu lầm khiến bạn tổn thương, em nên làm gì?", "opts": ["Xóa bài đăng và xin lỗi bạn đó công khai", "Giải thích không có ý gì nên không cần xin lỗi", "Bỏ qua vì chuyện nhỏ", "Đăng bài khác để biện minh"], "ans": 0, "alt": null}, {"q": "HTML là viết tắt của cụm từ nào?", "opts": ["Hyperlinks and Text Markup Language", "Home Tool Markup Language", "HyperText Markup Language", "HyperText Makeup Language"], "ans": 2, "alt": null}, {"q": "Các thành phần của một phần tử (element) HTML là gì?", "opts": ["Thẻ mở, thuộc tính, nội dung và thẻ đóng (nếu có)", "Tiêu đề, đoạn văn bản và siêu liên kết", "Thẻ mở, nội dung và thẻ đóng", "Thẻ mở, thẻ đóng và thuộc tính"], "ans": 0, "alt": null}, {"q": "Phần tử <title> nằm trong phần tử nào?", "opts": ["<!DOCTYPE html>", "<head>", "<body>", "<p>"], "ans": 1, "alt": null}, {"q": "Phần mềm nào được sử dụng phổ biến để soạn thảo HTML trên máy tính?", "opts": ["Microsoft Word", "Sublime Text", "Adobe Photoshop", "Google Chrome"], "ans": 1, "alt": null}, {"q": "Thẻ <head></head> không có đặc điểm nào?", "opts": ["Có cả thẻ đóng và thẻ mở", "Khai báo nội dung phần mở đầu trang web", "Thường chứa thẻ <title></title>", "Nằm trong thẻ <body></body>"], "ans": 3, "alt": null}, {"q": "Thẻ nào xác định tiêu đề hiển thị trên thanh tiêu đề trình duyệt?", "opts": ["<meta>", "<head>", "<header>", "<title>"], "ans": 3, "alt": null}, {"q": "Thẻ HTML nào có thể xuất hiện nhiều hơn một lần trong trang web?", "opts": ["<p>", "<html>", "<body>", "<head>"], "ans": 0, "alt": null}, {"q": "Thẻ nào dùng để nhấn mạnh văn bản quan trọng bằng cách bôi đậm?", "opts": ["<important>", "<strong>", "<bold>", "<em>"], "ans": 1, "alt": null}, {"q": "Phương án nào không phải cú pháp đúng của cấu trúc trang web?", "opts": ["<html><head><title></title></head><body></body></html>", "<html><head><meta></meta></head><body></body></html>", "<html><title><head></head></title><body></body></html>", "<html><head></head><body><p></p></body></html>"], "ans": 2, "alt": null}, {"q": "Cú pháp nào dùng để khai báo thuộc tính cho phần tử HTML?", "opts": ["<tên_thẻ thuộc_tính=giá_trị;>Nội dung</tên_thẻ>", "<tên_thẻ thuộc_tính:giá_trị;>Nội dung</tên_thẻ>", "<tên_thẻ thuộc_tính:“giá_trị”;>Nội dung</tên_thẻ>", "<tên_thẻ thuộc_tính=“giá_trị”;>Nội dung</tên_thẻ>"], "ans": 3, "alt": null}, {"q": "Nội dung hiển thị trực tiếp trên trang web thường nằm trong cặp thẻ nào?", "opts": ["<head>...</head>", "<html>...</html>", "<title>...</title>", "<body>...</body>"], "ans": 3, "alt": null}, {"q": "Thẻ nào tạo các đoạn văn bản trong HTML?", "opts": ["<h1>", "<a>", "<p>", "<div>"], "ans": 2, "alt": null}, {"q": "Thẻ HTML nào dùng để in đậm đoạn văn bản?", "opts": ["<i>", "<strong>", "<u>", "<em>"], "ans": 1, "alt": null}, {"q": "Để in nghiêng một đoạn chữ trong HTML, sử dụng thẻ nào?", "opts": ["<italic>", "<i>", "<em>", "<it>"], "ans": 1, "alt": 2}, {"q": "Cặp thẻ <u>…</u> có tác dụng gì?", "opts": ["Làm văn bản màu đỏ", "Gạch chân văn bản", "Tô nền văn bản", "Tăng kích thước chữ"], "ans": 1, "alt": null}, {"q": "Kết quả của <p><b>Chào mừng</b> đến với <i>HTML</i></p> là gì?", "opts": ["Chào mừng in nghiêng, HTML in đậm", "Cả hai đều in nghiêng", "“Chào mừng” in đậm, “HTML” in nghiêng", "Cả hai in đậm"], "ans": 2, "alt": null}, {"q": "Mã HTML đúng để hiển thị “Xin chào Việt Nam” vừa đậm vừa nghiêng là gì?", "opts": ["<b><i>Xin chào Việt Nam</i></b>", "<i><b>Xin chào Việt Nam</b><i>", "<b>Xin chào Việt Nam</b><i>", "<strong><italic>Xin chào Việt Nam</italic></strong>"], "ans": 0, "alt": null}, {"q": "Với mã <p><u><b>HTML cơ bản</b></u></p>, kết quả là gì?", "opts": ["Chỉ in đậm", "Chỉ gạch chân", "In đậm và gạch chân", "In nghiêng và gạch chân"], "ans": 2, "alt": null}, {"q": "Thẻ <mark> có ý nghĩa nào?", "opts": ["Định dạng văn bản nghiêng", "Định dạng văn bản gạch chân", "Định dạng văn bản bằng màu nền nổi bật", "Định dạng văn bản in đậm"], "ans": 2, "alt": null}], "tf": [{"q": "AI được ứng dụng trong y tế, giao thông, giáo dục và thương mại điện tử.", "ans": true}, {"q": "AI giúp con người xử lý công việc nhanh hơn và chính xác hơn.", "ans": true}, {"q": "Khi dùng Google Dịch để chuyển ngôn ngữ, bạn đang sử dụng ứng dụng có AI.", "ans": false}, {"q": "AI có thể hoàn toàn thay thế con người trong mọi công việc.", "ans": false}, {"q": "Trí tuệ nhân tạo là khả năng của máy tính mô phỏng hoạt động trí tuệ của con người.", "ans": true}, {"q": "AI chỉ thực hiện tác vụ đã lập trình sẵn, không thể tự học hỏi.", "ans": false}, {"q": "Chatbot tự động trả lời tin nhắn là một ứng dụng của AI.", "ans": true}, {"q": "AI không liên quan đến dữ liệu và có thể hoạt động độc lập không cần đầu vào.", "ans": false}, {"q": "AI giúp tự động hóa nhiều công việc, tiết kiệm thời gian.", "ans": true}, {"q": "Áp dụng AI không bao giờ gây ra rủi ro hoặc ảnh hưởng xã hội.", "ans": false}, {"q": "Lạm dụng AI trong học tập có thể làm học sinh giảm tư duy độc lập.", "ans": true}, {"q": "AI có thể bị dùng sai mục đích như tạo tin giả hoặc xâm phạm quyền riêng tư.", "ans": false}, {"q": "AI có thể tự động đánh giá kết quả học tập của học sinh.", "ans": true}, {"q": "AI thay thế hoàn toàn vai trò của giáo viên trong lớp học.", "ans": false}, {"q": "AI có thể cá nhân hóa việc học tập cho mỗi học sinh.", "ans": true}, {"q": "AI tự động giải quyết mọi vấn đề trong giáo dục.", "ans": false}, {"q": "Bạn B rất thích vì có nhiều lượt thích với video của mình.", "ans": false}, {"q": "H nhắc B dừng đăng và chia sẻ video khi chưa xin phép.", "ans": true}, {"q": "K lập tức bình luận video của B là quay dở.", "ans": false}, {"q": "B hẹn K sau buổi học để tranh luận đúng sai.", "ans": false}, {"q": "Thẻ <p> tạo đoạn văn bản, thường được phân tách bằng khoảng trống giữa các đoạn.", "ans": true}, {"q": "Thẻ <p> không thể chứa phần tử HTML nào khác.", "ans": false}, {"q": "Nội dung trong thẻ <p> hiển thị thành đoạn mới với khoảng trống giữa các đoạn.", "ans": true}, {"q": "Thẻ <p> tổ chức văn bản nhưng không ảnh hưởng cách hiển thị trên trình duyệt.", "ans": false}]};
+const letters=['A','B','C','D']; const mcqRoot=document.querySelector('#mcq'),tfRoot=document.querySelector('#tf');
+const chosen={}, tfChosen={}; let submitted=false;
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+DATA.mcq.forEach((q,i)=>{let el=document.createElement('article');el.className='question';el.dataset.search=(q.q+' '+q.opts.join(' ')).toLowerCase();el.id='mcq'+i;
+el.innerHTML=`<div class="qhead"><div class="num">${i+1}</div><div class="qtext">${esc(q.q)}</div><span class="topic">${i<10?'CHỦ ĐỀ 1':i<21?'CHỦ ĐỀ 2':'HTML'}</span></div><div class="options">${q.opts.map((o,j)=>`<label class="option" data-opt="${j}"><input type="radio" name="m${i}" value="${j}"><span class="letter">${letters[j]}.</span><span>${esc(o)}</span></label>`).join('')}</div><div class="feedback" aria-live="polite"></div>`;
+el.querySelectorAll('input').forEach(inp=>inp.addEventListener('change',()=>{chosen[i]=Number(inp.value);el.querySelectorAll('.option').forEach(x=>x.classList.toggle('selected',x.dataset.opt===inp.value));updateProgress();if(submitted)gradeOne(i)}));mcqRoot.appendChild(el);});
+DATA.tf.forEach((q,i)=>{let el=document.createElement('article');el.className='question';el.dataset.search=q.q.toLowerCase();el.id='tf'+i;let group=Math.floor(i/4)+1,sub=String.fromCharCode(97+i%4);
+el.innerHTML=`<div class="qhead"><div class="num">${group}.${sub}</div><div class="qtext">${esc(q.q)}</div><span class="topic">ĐÚNG / SAI</span></div><div class="tf-options"><button class="tfbtn" data-value="true">Đúng</button><button class="tfbtn" data-value="false">Sai</button></div><div class="feedback" aria-live="polite"></div>`;
+el.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{if(submitted)return;tfChosen[i]=b.dataset.value==='true';el.querySelectorAll('button').forEach(x=>x.classList.toggle('selected',x===b));updateProgress();}));tfRoot.appendChild(el);});
+function updateProgress(){let n=Object.keys(chosen).length+Object.keys(tfChosen).length,total=DATA.mcq.length+DATA.tf.length;document.querySelector('#progressText').textContent=`${n} / ${total} ý`;document.querySelector('#progressFill').style.width=(n/total*100)+'%';}
+function gradeOne(i){let el=document.querySelector('#mcq'+i),q=DATA.mcq[i],correct=[q.ans];if(q.alt!==null&&q.alt!==undefined)correct.push(q.alt);el.querySelectorAll('.option').forEach((o,j)=>{o.classList.remove('correct','wrong');if(correct.includes(j))o.classList.add('correct');if(chosen[i]===j&&!correct.includes(j))o.classList.add('wrong')});let f=el.querySelector('.feedback');f.className='feedback '+(correct.includes(chosen[i])?'good':'bad');f.textContent='Đáp án: '+correct.map(x=>letters[x]).join(' / ')+(chosen[i]===undefined?' · Chưa trả lời':correct.includes(chosen[i])?' · Chính xác':' · Chưa chính xác');}
+function submit(){submitted=true;let score=0;DATA.mcq.forEach((q,i)=>{let c=[q.ans];if(q.alt!==null&&q.alt!==undefined)c.push(q.alt);if(c.includes(chosen[i]))score++;gradeOne(i);document.querySelectorAll(`#mcq${i} input`).forEach(x=>x.disabled=true)});
+DATA.tf.forEach((q,i)=>{let el=document.querySelector('#tf'+i),val=tfChosen[i];if(val===q.ans)score++;el.querySelectorAll('button').forEach(b=>{b.disabled=true;let v=b.dataset.value==='true';if(v===q.ans)b.classList.add('correct');if(val===v&&v!==q.ans)b.classList.add('wrong')});let f=el.querySelector('.feedback');f.className='feedback '+(val===q.ans?'good':'bad');f.textContent='Đáp án: '+(q.ans?'Đúng':'Sai')+(val===undefined?' · Chưa trả lời':val===q.ans?' · Chính xác':' · Chưa chính xác')});
+document.querySelector('#score').textContent=score+'/47';document.querySelector('#resultText').textContent=`Bạn đã hoàn thành phần có đáp án trong tài liệu. Tỉ lệ đúng: ${Math.round(score/47*100)}%.`;document.querySelector('#result').classList.add('show');document.querySelector('#submit').textContent='Đã nộp bài';document.querySelector('#submit').disabled=true;document.querySelector('#result').scrollIntoView({behavior:'smooth',block:'center'});}
+document.querySelector('#submit').addEventListener('click',submit);
+document.querySelector('#clear').addEventListener('click',()=>{if(!confirm('Xóa toàn bộ câu trả lời và làm lại từ đầu?'))return;location.reload()});
+document.querySelector('#review').addEventListener('click',()=>{document.querySelector('#mcq0').scrollIntoView({behavior:'smooth'});});
+document.querySelector('#backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.querySelector('#search').addEventListener('input',e=>{let s=e.target.value.toLowerCase().trim();document.querySelectorAll('.question').forEach(el=>el.classList.toggle('hidden',!el.dataset.search.includes(s)))});
+</script></body></html>
